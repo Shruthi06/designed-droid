@@ -1,0 +1,88 @@
+package com.shruthi.radio_toggle;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+import android.view.Menu;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	CheckBox checkred, checkblue;
+	RadioGroup radiogroup1;
+	TextView result;
+	
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		checkred=(CheckBox) findViewById(R.id.checkred);
+		checkblue=(CheckBox) findViewById(R.id.checkblue);
+		result=(TextView) findViewById(R.id.result);
+		radiogroup1=(RadioGroup) findViewById(R.id.radioGroup1);
+		
+		
+		/*if  (checkblue.isChecked())
+		{
+			Log.d("[DEBUG]", "option 2 is selected");
+			
+		}
+		checkred.setOnCheckedChangeListener(new OnCheckedChangeListener() 
+		{
+
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean state) 
+			{
+				// TODO Auto-generated method stub
+				if(state==true)
+				{
+					result.setText("blue is selected");
+				}
+				
+				
+			}
+
+		});*/
+		
+	
+		if(checkred.isChecked())
+		{
+			Log.d("[DEBUG]", "red is selected");
+			
+		}
+		else
+		{
+			Log.d("[DEBUG]", "blue is selected");
+		}
+		checkred.setOnCheckedChangeListener(new OnCheckedChangeListener() 
+		{
+
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean state) 
+			{
+				// TODO Auto-generated method stub
+				if(state==true)
+				{
+					result.setText("red is selected");
+				}
+				
+				
+			}
+
+		});
+		
+		
+		
+		
+		
+		
+	}
+
+	
+}

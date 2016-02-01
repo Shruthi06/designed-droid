@@ -1,0 +1,27 @@
+package com.shruthi.spinner;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.Spinner;
+
+public class MainActivity extends Activity {
+	
+	Spinner groceryspinr;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		groceryspinr.findViewById(R.id.grossaryspinner);
+		
+		
+		String [] grocery={"vegitables", "fruites", "poultry", "spices","daals","icecreames"};
+		
+	}
+
+	
+
+}

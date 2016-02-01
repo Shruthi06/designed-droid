@@ -1,0 +1,48 @@
+package com.shruthi.thirdapp;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class Buttonavtivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		EditText firsttexttext,secondtext;
+	    Button buttondone;
+	    TextView outputtextview;
+	    public void onCreate (Bundle savedInstanceState1) 
+		{
+	        super.onCreate(savedInstanceState1);
+	        setContentView(R.layout.activity_main);
+	        
+	        firsttexttext = (EditText)findViewById(R.id.text1);
+	        firsttexttext = (EditText)findViewById(R.id.text2);
+	        buttondone = (Button) findViewById(R.id.button1);
+	        outputtextview = (TextView) findViewById(R.id.textView1);
+
+	        displayred = (Button) findViewById(R.id.buttoncolordispaly);
+	        displayblue = (Button) findViewById(R.id.buttoncolordisplayblue);
+	        
+	        
+	        displayred.setOnClickListener(MainActivity.this);
+	        displayblue.setOnClickListener(MainActivity.this);
+	     
+	    }
+		
+	    
+		super.onCreate(savedInstanceState1);
+		setContentView(R.layout.activity_buttonavtivity);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.buttonavtivity, menu);
+		return true;
+	}
+
+}

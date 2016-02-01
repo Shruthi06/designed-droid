@@ -1,0 +1,31 @@
+package com.shruthi.radio_toggle;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.CheckBox;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	CheckBox checkred, checkblue;
+	RadioGroup radiogroup1;
+	TextView result;
+	
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		checkred=(CheckBox) findViewById(R.id.checkred);
+		checkblue=(CheckBox) findViewById(R.id.checkblue);
+		result=findViewById(R.id.result);
+		
+		
+		
+	}
+
+	
+}
