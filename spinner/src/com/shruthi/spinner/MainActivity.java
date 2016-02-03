@@ -32,22 +32,7 @@ public class MainActivity extends Activity {
 		
 		groceryspinr.setOnItemSelectedListener(new OnItemSelectedListener() {
 
-			/*@Override
-			public void onItemSelected(AdapterView<?> arg0, View arg1,
-					int position, long arg3) 
-			{
-				Log.d("[DEBUG]", phonebrands[position]);
-				
-				Toast.makeText(MainActivity.this,phonebrands[position],Toast.LENGTH_SHORT).show();
-				
-			}
-
-			@Override
-			public void onNothingSelected(AdapterView<?> arg0) 
-			{
-				// TODO Auto-generated method stub
-				
-			}*/
+			
 
 			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1,int position, long arg3) 

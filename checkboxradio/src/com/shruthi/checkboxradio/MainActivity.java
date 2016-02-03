@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		checkbox1btm= findViewById(R.id.checkboxjspbtm);
+		checkbox1btm= (CheckBox) findViewById(R.id.checkboxjspbtm);
 	}
 
 	@Override

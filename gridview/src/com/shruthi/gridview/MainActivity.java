@@ -1,0 +1,46 @@
+package com.shruthi.gridview;
+
+import android.R.string;
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+	
+	GridView grocerygrid;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		grocerygrid=(GridView) findViewById(R.id.grocerygridView);
+		final String [] grocery_items={"fruits", "vegitables", "spices","poultry","backery","grains","icecreams","coocking oil","pickles"};
+		
+		ArrayAdapter<String> grocryadapter= new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, grocery_items);
+		grocerygrid.setAdapter(grocryadapter);
+		
+		grocerygrid.setOnItemClickListener(new OnItemClickListener() 
+		{
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int positon,
+					long arg3) 
+			{
+				Toast.makeText(MainActivity.this, "your selected grocery item is   " + grocery_items[positon].toUpperCase() ,Toast.LENGTH_LONG).show();
+			}
+		});
+		
+		
+		
+	}
+
+	
+}

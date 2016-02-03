@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;gridView1&apos; in &apos;com.shruthi.gridview.R.id&apos; to &apos;grocerygridView&apos;&#x0D;&#x0A;- Original project: &apos;gridview&apos;&#x0D;&#x0A;- Original element: &apos;com.shruthi.gridview.R.id.gridView1&apos;&#x0D;&#x0A;- Renamed element: &apos;com.shruthi.gridview.R.id.grocerygridView&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="true" description="Rename field &apos;gridView1&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/gen&lt;com.shruthi.gridview{R.java[R[id^gridView1" name="grocerygridView" references="true" setter="false" stamp="1454418147585" textual="false" version="1.0"/>
+</session>

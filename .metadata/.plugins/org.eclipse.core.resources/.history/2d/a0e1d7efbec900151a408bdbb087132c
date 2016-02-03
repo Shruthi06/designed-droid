@@ -1,0 +1,30 @@
+package com.shruthi.linkdinlogin;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class MainActivity extends Activity {
+	
+	EditText ussername,password;
+	Button login;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		ussername=(EditText) findViewById(R.id.editTextusername);
+		password=(EditText) findViewById(R.id.editpassword);
+		login=(Button) findViewById(R.id.Login);
+		
+		
+		
+		
+	}
+
+	
+}
