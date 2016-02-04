@@ -1,5 +1,6 @@
 package com.shruthi.linkdinlogin;
 
+import android.R.bool;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -15,6 +16,7 @@ public class MainActivity extends Activity {
 	Button login;
 	String [] stusername1={"shruthi","pramila","vani"};
 	String [] stpassword2={"neeta","anita","reva"};
+	Boolean flag;
 	
 
 	@Override
@@ -34,22 +36,29 @@ public class MainActivity extends Activity {
 			{
 			   String entun=ussername.getText().toString();
 			   String enpsw=password.getText().toString();
-			   if(true)
-			   {
+			   
 				   for(int i=0;i<stusername1.length ;i++)
 				   {
+					   
 					   if(entun.equalsIgnoreCase(stusername1[i]) && enpsw.equalsIgnoreCase(stpassword2[i]))
 					   {
-						   Toast.makeText(MainActivity.this, "login succesful", Toast.LENGTH_SHORT).show();
-					   }
-				   
+						   
+							   Toast.makeText(MainActivity.this, "login succesful", Toast.LENGTH_SHORT).show();
+							   //int val=1; 
+							   flag=false;
+							   
+						   
+					   } 
+					   
+						   
+				   }
+				    if(flag==true)
+				   {
+					   Toast.makeText(MainActivity.this, "user name or password is incorrect. Please try again", Toast.LENGTH_SHORT).show();
 				   }
 			   
-			   
-				   Toast.makeText(MainActivity.this, "user name or password is incorrect. Please try again", Toast.LENGTH_SHORT).show();
-			   
+				   
 			   }
-			}
 		});
 		
 		

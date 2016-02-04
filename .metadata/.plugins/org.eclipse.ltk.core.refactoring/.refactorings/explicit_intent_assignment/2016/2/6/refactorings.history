@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;explicit_intent_assignment&apos;&#x0D;&#x0A;- Original project: &apos;explicit_intent_assignment&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     images.jpg&#x0D;&#x0A;     shopping-card-groceries_300.jpg&#x0D;&#x0A;     shopping-cart-with-groceries.jpg" description="Delete elements" element1="res/drawable-hdpi/shopping-cart-with-groceries.jpg" element2="res/drawable-hdpi/shopping-card-groceries_300.jpg" element3="res/drawable-hdpi/images.jpg" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1454493089056" subPackages="false" version="1.0"/>
+</session>

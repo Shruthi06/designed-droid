@@ -1,0 +1,52 @@
+package com.example.grocerykart;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class Shipping_address extends Activity {
+	
+	EditText street,landmark,pincode;
+	Button done;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_shipping_address);
+		
+		street=(EditText) findViewById(R.id.editTextstreet);
+		landmark=(EditText) findViewById(R.id.editTextLM);
+		pincode=(EditText) findViewById(R.id.editText_pincode);
+		done=(Button) findViewById(R.id.buttondone);
+		
+		
+		
+		
+		final String s1=street.getText().toString();
+		final String s2=landmark.getText().toString();
+		final String s3= pincode.getText().toString();
+		
+		done.setOnClickListener(new OnClickListener() 
+		{
+			
+			@Override
+			public void onClick(View v) 
+			{
+			  Toast.makeText(Shipping_address.this, "gocerry items will be shipped to the address  " + s1+" "+s2 +" "+s3,Toast.LENGTH_LONG).show();
+				
+				
+			}
+		});
+		
+		
+		
+	}
+
+	
+
+}

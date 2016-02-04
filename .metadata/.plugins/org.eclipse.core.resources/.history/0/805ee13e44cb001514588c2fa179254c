@@ -1,0 +1,31 @@
+package com.example.conversion_assignment;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ExpandableListView;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	ExpandableListView list;
+	Button convert;
+	EditText value1,value2;
+	TextView result;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		list=(ExpandableListView) findViewById(R.id.list);
+		convert=(Button) findViewById(R.id.buttonconvert);
+		value1=(EditText) findViewById(R.id.editTextresult);
+		value2=(EditText) findViewById(R.id.editTextvalue1);
+		result=findViewById(R.id.)
+	}
+
+	
+}

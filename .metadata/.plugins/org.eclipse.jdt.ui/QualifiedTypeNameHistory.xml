@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="com.shruthi.spinner.R.id"/>
 <fullyQualifiedTypeName name="com.shruthi.spinner.MainActivity"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
-<fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="android.widget.Spinner"/>
 <fullyQualifiedTypeName name="android.R.id"/>
 <fullyQualifiedTypeName name="com.shruthi.spinner_assignment.MainActivity"/>
@@ -19,11 +18,25 @@
 <fullyQualifiedTypeName name="android.R.layout"/>
 <fullyQualifiedTypeName name="android.widget.AdapterView.OnItemClickListener"/>
 <fullyQualifiedTypeName name="com.shruthi.gridview.MainActivity"/>
+<fullyQualifiedTypeName name="com.shruthi.linkdinlogin.R.id"/>
+<fullyQualifiedTypeName name="com.shruthi.linkdinlogin.MainActivity"/>
+<fullyQualifiedTypeName name="com.shruthi.explicit_intent.MainActivity"/>
+<fullyQualifiedTypeName name="com.shruthi.explicit_intent.Activity_second"/>
+<fullyQualifiedTypeName name="com.example.grocerykart.R.id"/>
+<fullyQualifiedTypeName name="com.example.grocerykart.MainActivity"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.example.grocerykart.Second_activity"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
-<fullyQualifiedTypeName name="com.shruthi.linkdinlogin.R.id"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
-<fullyQualifiedTypeName name="com.shruthi.linkdinlogin.MainActivity"/>
+<fullyQualifiedTypeName name="com.example.grocerykart.Shipping_address"/>
+<fullyQualifiedTypeName name="android.R.bool"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.example.conversion_assignment.R.id"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="com.example.conversion_assignment.MainActivity"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.widget.ExpandableListView"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,203 @@
+package com.example.conversion_assignment;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.text.Editable;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ExpandableListView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+	ListView conversionlist;
+	Button convert;
+	EditText value1,value2;
+	TextView result;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) 
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		conversionlist= (ListView) findViewById(R.id.listViewconversiontype);
+		convert=(Button) findViewById(R.id.buttonconvert);
+		value1=(EditText) findViewById(R.id.editTextvalue1);
+		value2=(EditText) findViewById(R.id.editTextvalue2);
+		result=(TextView) findViewById(R.id.result_textview);
+		
+		
+		String [] list={"Meter to Kilometer", "Celsius to fharenheit","liters to MilliLiters","USD to INR"};
+		ArrayAdapter< String> adapter= new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_expandable_list_item_1, list);
+		conversionlist.setAdapter(adapter);
+		
+		
+		
+		conversionlist.setOnItemClickListener(new OnItemClickListener() 
+		{
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+					long arg3) 
+			{
+				
+				switch(position)
+				{
+				
+				
+				 case 0:	value1.setHint("enter value in Meter");
+							value2.setHint("enter value in Kilometer");
+							convert.setOnClickListener(new OnClickListener() 
+							{
+					
+									@Override
+									public void onClick(View v) 
+									{
+										String meter=value1.getText().toString();
+										String kilometer=value2.getText().toString();
+										if(meter.length()!=0)
+										{
+											Double l1=Double.parseDouble(meter);
+											double result= (l1*0.001);
+											String result_text=String.valueOf(result);
+											MainActivity.this.result.setText(result_text);
+											Toast.makeText(MainActivity.this, l1+"Meters is equals to"+result_text+"Kilometers", Toast.LENGTH_LONG).show();
+							
+							
+										}
+										else if(kilometer.length()!=0)
+										{
+											double l1=Double.parseDouble(kilometer);
+											double result=(l1*1000);
+											String result_text=String.valueOf(result);
+											MainActivity.this.result.setText(result_text);
+											Toast.makeText(MainActivity.this, l1+"KiloMeters is equals to"+result_text+"Meters", Toast.LENGTH_LONG).show();
+							
+							
+										}
+									}
+							});
+					break;
+					
+				 case 1:
+					 value1.setHint("enter value in Celsius");
+					value2.setHint("enter value in Fharenheit");
+					convert.setOnClickListener(new OnClickListener() 
+					{
+			
+							@Override
+							public void onClick(View v) 
+							{
+								String celsi=value1.getText().toString();
+								String fhar=value2.getText().toString();
+								if(celsi.length()!=0)
+								{
+									Double l1=Double.parseDouble(celsi);
+									double result= (l1*1.8+32);
+									String result_text=String.valueOf(result);
+									MainActivity.this.result.setText(result_text);
+									Toast.makeText(MainActivity.this, l1+"Celsius is equals to"+result_text+"Fharenheit", Toast.LENGTH_LONG).show();
+					
+					
+								}
+								else if(fhar.length()!=0)
+								{
+									double l1=Double.parseDouble(fhar);
+									double result=(l1-32)/1.8;
+									String result_text=String.valueOf(result);
+									MainActivity.this.result.setText(result_text);
+									Toast.makeText(MainActivity.this, l1+" Fharenheit is equals to"+result_text+"Celsius", Toast.LENGTH_LONG).show();
+					
+					
+								}
+							}
+					});
+			break;
+				 case 2:
+				 
+					 value1.setHint("enter value in Liters");
+					value2.setHint("enter value in MilliLiters");
+					convert.setOnClickListener(new OnClickListener() 
+					{
+			
+							@Override
+							public void onClick(View v) 
+							{
+								String ltr=value1.getText().toString();
+								String mililtr=value2.getText().toString();
+								if(ltr.length()!=0)
+								{
+									Double l1=Double.parseDouble(ltr);
+									double result= (l1*1000);
+									String result_text=String.valueOf(result);
+									MainActivity.this.result.setText(result_text);
+									Toast.makeText(MainActivity.this, l1+" Liters is equals to"+result_text+"Milliliters", Toast.LENGTH_LONG).show();
+					
+					
+								}
+								else if(mililtr.length()!=0)
+								{
+									double l1=Double.parseDouble(mililtr);
+									double result=(l1/1000);
+									String result_text=String.valueOf(result);
+									MainActivity.this.result.setText(result_text);
+									Toast.makeText(MainActivity.this, l1+" Milliliters is equals to"+result_text+"Liters", Toast.LENGTH_LONG).show();
+					
+					
+								}
+							}
+					});
+			break;
+				 case 3:
+			 
+			 value1.setHint("enter value in USD");
+			value2.setHint("enter value in INR");
+			convert.setOnClickListener(new OnClickListener() 
+			{
+	
+					@Override
+					public void onClick(View v) 
+					{
+						String usd=value1.getText().toString();
+						String inr=value2.getText().toString();
+						if(usd.length()!=0)
+						{
+							Double l1=Double.parseDouble(usd);
+							double result= (l1*67.52);
+							String result_text=String.valueOf(result);
+							MainActivity.this.result.setText(result_text);
+							Toast.makeText(MainActivity.this, l1+" USD is equals to"+result_text+"INR", Toast.LENGTH_LONG).show();
+			
+			
+						}
+						else if(inr.length()!=0)
+						{
+							double l1=Double.parseDouble(inr);
+							double result=(l1/67.52);
+							String result_text=String.valueOf(result);
+							MainActivity.this.result.setText(result_text);
+							Toast.makeText(MainActivity.this, l1+" INR is equals to"+result_text+"USDs", Toast.LENGTH_LONG).show();
+			
+			
+						}
+					}
+			});
+	break;
+					 
+				}
+			}
+			
+			});
+		
+
+	}
+}

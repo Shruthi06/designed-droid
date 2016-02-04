@@ -1,0 +1,43 @@
+package com.shruthi.meter_to_km;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class MainActivity extends Activity {
+	Button submit;
+	EditText metr,result;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		submit=(Button) findViewById(R.id.buttonsublit);
+		metr=(EditText) findViewById(R.id.meter);
+		result=(EditText) findViewById(R.id.editTextresult);
+		
+		result.setOnClickListener(new OnClickListener() 
+		{
+			
+			@Override
+			public void onClick(View v) 
+			{
+				String meter=metr.getText().toString();
+				result.setText(meter);
+				/*long l1=Integer.parseInt(meter);
+				long resultlong=(long) (l1*0.001);
+				String result_text=String.valueOf(resultlong);
+				result.setText(result_text);*/
+
+			}
+		});
+		
+	}
+
+	
+
+}
