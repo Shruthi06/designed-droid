@@ -1,0 +1,28 @@
+package com.example.mock_converter;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	EditText meter,kilometer;
+	Button submit;
+	TextView result;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) 
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		meter=(EditText) findViewById(R.id.edit_meter);
+		kilometer=(EditText) findViewById(R.id.edit_km);
+		
+	}
+
+	
+
+}

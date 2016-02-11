@@ -18,6 +18,7 @@
         android:layout_below="@+id/textView1"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="50dp"
+        android:inputType="numberDecimal"
         android:ems="10" >
 
         <requestFocus />
@@ -30,6 +31,7 @@
         android:layout_alignLeft="@+id/editTextvalue1"
         android:layout_alignRight="@+id/editTextvalue1"
         android:layout_below="@+id/editTextvalue1"
+        android:inputType="numberDecimal"
         android:layout_marginTop="46dp"
         android:ems="10" />
 
@@ -39,35 +41,34 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:textSize="20dp"
-        android:text="Select the Conversion Type" />
+        android:text="Select the Conversion Type"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/buttonconvert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextvalue2"
-        android:layout_marginRight="26dp"
-        android:layout_marginTop="49dp"
-        android:layout_toLeftOf="@+id/listViewconversiontype"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="42dp"
+        android:layout_toLeftOf="@+id/spinnerconversion_list"
         android:text="Convert" />
 
-    <ListView
-        android:id="@+id/listViewconversiontype"
-        android:layout_width="130dp"
-        android:layout_height="500dp"
+    <Spinner
+        android:id="@+id/spinnerconversion_list"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView1" >
-    </ListView>
+        android:layout_below="@+id/textView1" />
 
     <TextView
         android:id="@+id/result_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_alignBottom="@+id/listViewconversiontype"
-        android:layout_alignRight="@+id/buttonconvert"
-        android:layout_marginBottom="36dp"
-        android:layout_marginRight="14dp"
-        android:text="Result..." />
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/editTextvalue2"
+        android:layout_below="@+id/buttonconvert"
+        android:layout_marginTop="30dp"
+        android:text="Result..."
+        android:textSize="20dp" />
 
 </RelativeLayout>

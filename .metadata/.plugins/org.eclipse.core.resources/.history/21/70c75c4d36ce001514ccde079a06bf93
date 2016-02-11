@@ -1,0 +1,21 @@
+package com.shruthi.mock_app;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.ListView;
+
+public class MainActivity extends Activity 
+{
+	ListView phone_number;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) 
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		phone_number=(ListView) findViewById(R.id.list_phone_number);
+	}
+
+	
+}

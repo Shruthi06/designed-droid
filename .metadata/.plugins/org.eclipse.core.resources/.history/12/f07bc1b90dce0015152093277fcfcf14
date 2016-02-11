@@ -1,0 +1,41 @@
+package com.shruthi.camera_intent;
+
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+
+public class MainActivity extends Activity {
+	
+	Button cameraclick;
+	ImageView showimage;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		cameraclick=(Button) findViewById(R.id.button_startcamera);
+		showimage=(ImageView) findViewById(R.id.imageView_image);
+		
+		cameraclick.setOnClickListener(new OnClickListener() 
+		{
+			
+			@Override
+			public void onClick(View v) 
+			{
+				Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+				startActivity(intent);
+			}
+		});
+		
+		
+	}
+
+	
+}
