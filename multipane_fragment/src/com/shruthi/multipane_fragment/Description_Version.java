@@ -10,7 +10,10 @@ import android.widget.TextView;
 public class Description_Version extends Fragment
 {
     TextView displaydesc;
+    String[] versiondesc = {"This is version 1","This is version 2","This is version 3","This is version 4"};
+    
     @Override
+    
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) 
     {
     	return inflater.inflate(R.layout.fragment_description, container,false);
@@ -25,15 +28,16 @@ public void onStart()
 		if(args!=null)
 		
 		{
-			recievedata(args.getInt("position_selected"));
+			// the key string (postion) should be same
+			recieve_position(args.getInt("position"));
 		}
 	
 	}
 	
-	public void recievedata(int position)
+	public void recieve_position(int position)
 	
 	{
-		String[] versiondesc = {"This is version 1","This is version 2","This is version 3","This is version 4"};
+		
 		
 		displaydesc= (TextView) getActivity().findViewById(R.id.textView1);
 		

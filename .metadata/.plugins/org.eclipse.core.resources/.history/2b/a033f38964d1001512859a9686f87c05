@@ -1,0 +1,45 @@
+package com.shruthi.multipane_fragment;
+
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+public class Description_Version extends Fragment
+{
+    TextView displaydesc;
+    String[] versiondesc = {"This is version 1","This is version 2","This is version 3","This is version 4"};
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) 
+    {
+    	return inflater.inflate(R.layout.fragment_description, container,false);
+    	
+    }
+public void onStart() 
+	
+	{
+		super.onStart();
+		Bundle args =  getArguments();
+		
+		if(args!=null)
+		
+		{
+			recieve_position(args.getInt("position_selected"));
+		}
+	
+	}
+	
+	public void recieve_position(int position)
+	
+	{
+		
+		
+		displaydesc= (TextView) getActivity().findViewById(R.id.textView1);
+		
+		displaydesc.setText(versiondesc[position]);
+	
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.shruthi.instance_service_demo;
+
+import android.app.IntentService;
+import android.content.Intent;
+
+public class intentservice extends IntentService 
+{
+
+	public intentservice(String name) 
+	{
+		super(name);
+	}
+
+	
+	
+	@Override
+	protected void onHandleIntent(Intent arg0) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,49 @@
+package com.shruthi.instance_service_demo;
+
+import android.app.IntentService;
+import android.content.Intent;
+import android.widget.Toast;
+
+public class intentservice extends IntentService 
+{
+
+	public intentservice(String name) 
+	{
+		super(name);
+		
+	}
+	
+	@Override
+	public void onCreate() 
+	{
+		super.onCreate();
+		Toast.makeText(intentservice.this, "running onCreate() method", Toast.LENGTH_SHORT).show();
+	}
+	
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId)
+	{
+		Toast.makeText(intentservice.this, "running onStartCommand() method", Toast.LENGTH_SHORT).show();
+		return super.onStartCommand(intent, flags, startId);
+		
+	}
+	
+	@Override
+	public void onDestroy() 
+	{
+		super.onDestroy();
+		Toast.makeText(intentservice.this, "running ondestroy() method", Toast.LENGTH_SHORT).show();
+	}	
+	
+	
+
+	
+	
+	@Override
+	protected void onHandleIntent(Intent arg0) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}
